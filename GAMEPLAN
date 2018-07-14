@@ -1,0 +1,5 @@
+== GAMEPLAN ==
+
+[ ] API
+  [ ] getDailyFact() - Return the fact of the day;
+  [ ] getPreviousFacts() - Returns facts from yesterday
