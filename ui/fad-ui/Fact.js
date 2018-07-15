@@ -16,27 +16,32 @@ export default class Fact extends React.Component {
     });
   };
 
+  goToSource = () => {
+    // TODO: implement
+  };
+
   render() {
+    const fact = this.props.fact;
     return (
       <Card>
         <CardItem>
           <Body>
             <Text>
-              {this.props.fact}
+              {fact.title}
             </Text>
           </Body>
         </CardItem>
         <CardItem>
           <Left>
-            <Button transparent onPress={this.openShareDialog}>
-              <Icon active name="share" />
-              <Text>Share</Text>
+            <Button transparent onPress={this.props.onViewSource}>
+              <Icon active name="link" />
+              <Text>Source</Text>
             </Button>
           </Left>
           <Body>
-            <Button transparent>
-              <Icon active name="chatbubbles" />
-              <Text>4 Comments</Text>
+            <Button transparent onPress={this.openShareDialog}>
+              <Icon active name="share" />
+              <Text>Share</Text>
             </Button>
           </Body>
           <Right>
